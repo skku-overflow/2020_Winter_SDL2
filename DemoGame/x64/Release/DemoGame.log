@@ -1,0 +1,58 @@
+﻿  main.cpp
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.h(8,12): error C2011:  'Game': 'class' type redefinition
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.h(8): message :  see declaration of 'Game'
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\main.cpp(36,19): error C2027:  use of undefined type 'Game'
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.h(8): message :  see declaration of 'Game'
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\main.cpp(38,6): error C2027:  use of undefined type 'Game'
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.h(8): message :  see declaration of 'Game'
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\main.cpp(40,13): error C2027:  use of undefined type 'Game'
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.h(8): message :  see declaration of 'Game'
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\main.cpp(44,7): error C2027:  use of undefined type 'Game'
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.h(8): message :  see declaration of 'Game'
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\main.cpp(45,7): error C2027:  use of undefined type 'Game'
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.h(8): message :  see declaration of 'Game'
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\main.cpp(46,7): error C2027:  use of undefined type 'Game'
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.h(8): message :  see declaration of 'Game'
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\main.cpp(54,6): error C2027:  use of undefined type 'Game'
+  Game.cpp
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.h(8): message :  see declaration of 'Game'
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.h(8,12): error C2011:  'Game': 'class' type redefinition
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.h(8): message :  see declaration of 'Game'
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.cpp(8,7): error C2027:  use of undefined type 'Game'
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.h(8): message :  see declaration of 'Game'
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.cpp(8,14): error C4430:  missing type specifier - int assumed. Note: C++ does not support default-int
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.cpp(10,1): warning C4508:  '{ctor}': function should return a value; 'void' return type assumed
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.cpp(11,8): error C2027:  use of undefined type 'Game'
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.h(8): message :  see declaration of 'Game'
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.cpp(11,15): error C4430:  missing type specifier - int assumed. Note: C++ does not support default-int
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.cpp(13,1): warning C4508:  '{dtor}': function should return a value; 'void' return type assumed
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.cpp(15,12): error C2027:  use of undefined type 'Game'
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.h(8): message :  see declaration of 'Game'
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.cpp(25,3): error C2065:  'window': undeclared identifier
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.cpp(26,7): error C2065:  'window': undeclared identifier
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.cpp(29,3): error C2065:  'renderer': undeclared identifier
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.cpp(29,33): error C2065:  'window': undeclared identifier
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.cpp(30,7): error C2065:  'renderer': undeclared identifier
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.cpp(31,27): error C2065:  'renderer': undeclared identifier
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.cpp(35,3): error C2065:  'isRunning': undeclared identifier
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.cpp(38,3): error C2065:  'isRunning': undeclared identifier
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.cpp(46,67): error C2065:  'renderer': undeclared identifier
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.cpp(50,12): error C2027:  use of undefined type 'Game'
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.h(8): message :  see declaration of 'Game'
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.cpp(55,3): error C2065:  'isRunning': undeclared identifier
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.cpp(63,12): error C2027:  use of undefined type 'Game'
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.h(8): message :  see declaration of 'Game'
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.cpp(64,2): error C2065:  'cnt': undeclared identifier
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.cpp(66,12): error C2065:  'cnt': undeclared identifier
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.cpp(66,16): error C2065:  'cnt': undeclared identifier
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.cpp(68,22): error C2065:  'cnt': undeclared identifier
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.cpp(71,12): error C2027:  use of undefined type 'Game'
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.h(8): message :  see declaration of 'Game'
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.cpp(72,18): error C2065:  'renderer': undeclared identifier
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.cpp(73,17): error C2065:  'renderer': undeclared identifier
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.cpp(74,20): error C2065:  'renderer': undeclared identifier
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.cpp(77,12): error C2027:  use of undefined type 'Game'
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.h(8): message :  see declaration of 'Game'
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.cpp(78,20): error C2065:  'window': undeclared identifier
+  TextureManager.cpp
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.cpp(79,22): error C2065:  'renderer': undeclared identifier
