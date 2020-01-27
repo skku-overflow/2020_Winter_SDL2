@@ -2,6 +2,7 @@
 #include "Game.h"
 #include "TextureManager.h"
 #include "GameObject.h"
+#include "Map.h"
 
 using namespace std;
 
@@ -11,6 +12,8 @@ using namespace std;
 
 // Creating object with object class
 GameObject* player;
+Map* map;
+
 SDL_Renderer* Game::renderer = nullptr;
 
 Game::Game() {
@@ -54,7 +57,8 @@ void Game::init(const char* title, int width, int height, bool fullscreen) {
 	/* Creating ... with LoadTexture() but without class */
 	// playerTex = TextureManager::LoadTexture("../images/creeper.png", renderer);
 
-	player = new GameObject("../images/creeper.png", renderer, 0, 0);
+	player = new GameObject("../images/creeper.png", 0, 0);
+	map = new Map();
 }
 
 void Game::handleEvents() {
@@ -72,17 +76,17 @@ void Game::handleEvents() {
 
 void Game::update() {
 	cnt++;
-
+	cout << "[cnt] " << cnt << endl;
 	// destR = { 2*cnt,cnt,32,32 };
 
 	player->update();
-
-	cout << "[cnt] " << cnt << endl;
+	// map->LoadMap();		// pass in the config, external txt, xml, etc. to the LoadMap() if we have map
 }
 
 void Game::render() {
 	SDL_RenderClear(renderer);
 	// SDL_RenderCopy(renderer, playerTex,NULL,&destR);
+	map->DrawMap();
 	player->render();
 	SDL_RenderPresent(renderer);
 }

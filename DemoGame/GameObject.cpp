@@ -5,11 +5,11 @@
 	Defining the constructor of the "GameObject" Class
 	[[[Creating an object]]]
 */
-GameObject::GameObject(const char* texturesheet, SDL_Renderer* ren, int xi, int yi) {
+GameObject::GameObject(const char* texturesheet, int xi, int yi) {
 	
 	// Assign a new renderer, texture for the newly created GameObject instance
-	renderer = ren;
-	objTexture = TextureManager::LoadTexture(texturesheet, ren);
+	// renderer = ren;				// Not needed : renderer of Game class
+	objTexture = TextureManager::LoadTexture(texturesheet);
 
 	xpos = xi;
 	ypos = yi;
@@ -33,5 +33,5 @@ void GameObject::update() {
 */
 void GameObject::render() {
 
-	SDL_RenderCopy(renderer, objTexture, &srcRect, &destRect);
+	SDL_RenderCopy(Game::renderer, objTexture, &srcRect, &destRect);
 }
