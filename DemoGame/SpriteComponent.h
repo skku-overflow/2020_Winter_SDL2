@@ -1,11 +1,12 @@
 #pragma once
 
 #include "Components.h"
+#include "TransformComponent.h"
 #include "SDL.h"
 
 class SpriteComponent : public Component {
 private:
-	PositionComponent* position;
+	TransformComponent* transform;
 	SDL_Texture* texture;
 	SDL_Rect srcRect, destRect;
 
@@ -20,15 +21,15 @@ public:
 	}
 
 	void init() override {
-		position = &entity->getComponent<PositionComponent>();
+		transform = &entity->getComponent<TransformComponent>();
 
 		srcRect = { 0,0,400,400 };
 		destRect.w = destRect.h = 32;
 	}
 
 	void update() override {
-		destRect.x = position->getx();
-		destRect.y = position->gety();
+		destRect.x = (int)transform->position.x;
+		destRect.y = (int)transform->position.y;
 	}
 
 	void draw() override {

@@ -4,6 +4,7 @@
 #include "Map.h"
 #include "ECS.h"
 #include "Components.h"
+#include "Vector2D.h"
 
 using namespace std;
 
@@ -56,7 +57,7 @@ void Game::init(const char* title, int width, int height, bool fullscreen) {
 
 	map = new Map();
 
-	player.addComponent<PositionComponent>(200,200);
+	player.addComponent<TransformComponent>(200,200);
 	player.addComponent<SpriteComponent>("../images/creeper.png");
 }
 
@@ -83,10 +84,12 @@ void Game::update() {
 	manager.refresh();
 	manager.update();
 
-	cout << "player: (" << player.getComponent<PositionComponent>().getx() << ", " <<
-		player.getComponent<PositionComponent>().gety() << ")" << endl;
+	cout << "player: (" << player.getComponent<TransformComponent>().position.x << ", " <<
+		player.getComponent<TransformComponent>().position.y << ")" << endl;
 
-	if (player.getComponent<PositionComponent>().getx() > 500) {
+	player.getComponent<TransformComponent>().position.Add(Vector2D(5, 0));
+
+	if (player.getComponent<TransformComponent>().position.x > 500) {
 		player.getComponent<SpriteComponent>().setTex("../images/enemy.png");
 	}
 }

@@ -65,7 +65,7 @@ void Game::init(const char* title, int width, int height, bool fullscreen) {
 	player = new GameObject("../images/creeper.png", 0, 0);
 	map = new Map();
 
-	newPlayer.addComponent<PositionComponent>();
+	newPlayer.addComponent<TransformComponent>();
 }
 
 void Game::handleEvents() {
@@ -90,8 +90,8 @@ void Game::update() {
 	// map->LoadMap();		// pass in the config, external txt, xml, etc. to the LoadMap() if we have map
 
 	manager.update();
-	cout << "newPlayer: (" << newPlayer.getComponent<PositionComponent>().getx() << ", " <<
-		newPlayer.getComponent<PositionComponent>().gety() << ")" << endl;
+	cout << "newPlayer: (" << newPlayer.getComponent<TransformComponent>().getx() << ", " <<
+		newPlayer.getComponent<TransformComponent>().gety() << ")" << endl;
 }
 
 void Game::render() {

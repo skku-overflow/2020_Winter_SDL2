@@ -1,2 +1,14 @@
 ﻿  Game.cpp
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\ECS.h(67,33): warning C4244:  'argument': conversion from '_Ty' to 'float', possible loss of data
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\ECS.h(67,33): warning C4244:         with
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\ECS.h(67,33): warning C4244:         [
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\ECS.h(67,33): warning C4244:             _Ty=int
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\ECS.h(67,33): warning C4244:         ]
+  Vector2D.cpp
+  Generating Code...
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.cpp(60): message :  see reference to function template instantiation 'T &Entity::addComponent<TransformComponent,int,int>(int &&,int &&)' being compiled
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.cpp(60): message :         with
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.cpp(60): message :         [
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.cpp(60): message :             T=TransformComponent
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.cpp(60): message :         ]
   DemoGame.vcxproj -> D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\x64\Debug\DemoGame.exe
