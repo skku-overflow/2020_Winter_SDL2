@@ -1,17 +1,25 @@
 #include <iostream>
 #include "Game.h"
 #include "TextureManager.h"
+#include "GameObject.h"
 #include "Map.h"
 #include "ECS.h"
 #include "Components.h"
 
 using namespace std;
 
+/* Creating every object without object class */
+// SDL_Texture* playerTex;
+// SDL_Rect srcR, destR;
+
+// Creating object with object class
+GameObject* player;
 Map* map;
+
 SDL_Renderer* Game::renderer = nullptr;
 
 Manager manager;
-auto& player(manager.addEntity());
+auto& newPlayer(manager.addEntity());
 
 Game::Game() {
 
@@ -54,10 +62,10 @@ void Game::init(const char* title, int width, int height, bool fullscreen) {
 	/* Creating ... with LoadTexture() but without class */
 	// playerTex = TextureManager::LoadTexture("../images/creeper.png", renderer);
 
+	player = new GameObject("../images/creeper.png", 0, 0);
 	map = new Map();
 
-	player.addComponent<PositionComponent>(200,200);
-	player.addComponent<SpriteComponent>("../images/creeper.png");
+	newPlayer.addComponent<PositionComponent>();
 }
 
 void Game::handleEvents() {
@@ -78,24 +86,19 @@ void Game::update() {
 	cout << "[cnt] " << cnt << endl;
 	// destR = { 2*cnt,cnt,32,32 };
 
-
+	player->update();
 	// map->LoadMap();		// pass in the config, external txt, xml, etc. to the LoadMap() if we have map
-	manager.refresh();
+
 	manager.update();
-
-	cout << "player: (" << player.getComponent<PositionComponent>().getx() << ", " <<
-		player.getComponent<PositionComponent>().gety() << ")" << endl;
-
-	if (player.getComponent<PositionComponent>().getx() > 500) {
-		player.getComponent<SpriteComponent>().setTex("../images/enemy.png");
-	}
+	cout << "newPlayer: (" << newPlayer.getComponent<PositionComponent>().getx() << ", " <<
+		newPlayer.getComponent<PositionComponent>().gety() << ")" << endl;
 }
 
 void Game::render() {
 	SDL_RenderClear(renderer);
 	// SDL_RenderCopy(renderer, playerTex,NULL,&destR);
 	map->DrawMap();
-	manager.draw();
+	player->render();
 	SDL_RenderPresent(renderer);
 }
 
@@ -105,3 +108,6 @@ void Game::clean() {
 	SDL_Quit();
 	cout << "Game quit" << endl;
 }
+
+
+
