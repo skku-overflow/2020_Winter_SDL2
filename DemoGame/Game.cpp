@@ -3,6 +3,8 @@
 #include "TextureManager.h"
 #include "GameObject.h"
 #include "Map.h"
+#include "ECS.h"
+#include "Components.h"
 
 using namespace std;
 
@@ -15,6 +17,9 @@ GameObject* player;
 Map* map;
 
 SDL_Renderer* Game::renderer = nullptr;
+
+Manager manager;
+auto& newPlayer(manager.addEntity());
 
 Game::Game() {
 
@@ -59,6 +64,8 @@ void Game::init(const char* title, int width, int height, bool fullscreen) {
 
 	player = new GameObject("../images/creeper.png", 0, 0);
 	map = new Map();
+
+	newPlayer.addComponent<PositionComponent>();
 }
 
 void Game::handleEvents() {
@@ -81,6 +88,10 @@ void Game::update() {
 
 	player->update();
 	// map->LoadMap();		// pass in the config, external txt, xml, etc. to the LoadMap() if we have map
+
+	manager.update();
+	cout << "newPlayer: (" << newPlayer.getComponent<PositionComponent>().getx() << ", " <<
+		newPlayer.getComponent<PositionComponent>().gety() << ")" << endl;
 }
 
 void Game::render() {
