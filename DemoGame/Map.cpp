@@ -1,5 +1,5 @@
-#include "Map.h"
-#include"TextureManager.h"
+#include "Headers/Map.h"
+#include "Headers/TextureManager.h"
 
 
 // config for tiles of the map

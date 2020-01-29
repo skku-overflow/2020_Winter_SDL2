@@ -1,10 +1,10 @@
 #include <iostream>
-#include "Game.h"
-#include "TextureManager.h"
-#include "Map.h"
-#include "ECS.h"
-#include "Components.h"
-#include "Vector2D.h"
+#include "Headers/Game.h"
+#include "Headers/TextureManager.h"
+#include "Headers/Map.h"
+#include "ECS/ECS.h"
+#include "ECS/Components.h"
+#include "Headers/Vector2D.h"
 
 using namespace std;
 
@@ -87,7 +87,7 @@ void Game::update() {
 	cout << "player: (" << player.getComponent<TransformComponent>().position.x << ", " <<
 		player.getComponent<TransformComponent>().position.y << ")" << endl;
 
-	player.getComponent<TransformComponent>().position.Add(Vector2D(5, 0));
+	player.getComponent<TransformComponent>().position.Add(Vector2D(2, 4));
 
 	if (player.getComponent<TransformComponent>().position.x > 500) {
 		player.getComponent<SpriteComponent>().setTex("../images/enemy.png");

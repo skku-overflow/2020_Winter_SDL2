@@ -1,10 +1,10 @@
 ﻿  Game.cpp
-D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\ECS.h(67,33): warning C4244:  'argument': conversion from '_Ty' to 'float', possible loss of data
-D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\ECS.h(67,33): warning C4244:         with
-D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\ECS.h(67,33): warning C4244:         [
-D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\ECS.h(67,33): warning C4244:             _Ty=int
-D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\ECS.h(67,33): warning C4244:         ]
-  Vector2D.cpp
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\ECS\ECS.h(67,33): warning C4244:  'argument': conversion from '_Ty' to 'float', possible loss of data
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\ECS\ECS.h(67,33): warning C4244:         with
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\ECS\ECS.h(67,33): warning C4244:         [
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\ECS\ECS.h(67,33): warning C4244:             _Ty=int
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\ECS\ECS.h(67,33): warning C4244:         ]
+  Map.cpp
   Generating Code...
 D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.cpp(60): message :  see reference to function template instantiation 'T &Entity::addComponent<TransformComponent,int,int>(int &&,int &&)' being compiled
 D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.cpp(60): message :         with

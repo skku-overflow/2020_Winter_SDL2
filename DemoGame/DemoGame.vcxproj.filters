@@ -18,27 +18,17 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>Src</Filter>
-    </ClCompile>
-    <ClCompile Include="Game.cpp">
-      <Filter>Src</Filter>
-    </ClCompile>
-    <ClCompile Include="TextureManager.cpp">
-      <Filter>Src</Filter>
-    </ClCompile>
     <ClCompile Include="GameObject.cpp">
-      <Filter>Src</Filter>
-    </ClCompile>
-    <ClCompile Include="Map.cpp">
       <Filter>Src</Filter>
     </ClCompile>
     <ClCompile Include="oldgame.cpp">
       <Filter>Src</Filter>
     </ClCompile>
-    <ClCompile Include="Vector2D.cpp">
-      <Filter>Src</Filter>
-    </ClCompile>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Map.cpp" />
+    <ClCompile Include="TextureManager.cpp" />
+    <ClCompile Include="Vector2D.cpp" />
+    <ClCompile Include="Game.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h">
@@ -71,9 +61,7 @@
     <ClInclude Include="Vector2D.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="resource.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
+    <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="..\images\creeper.png">

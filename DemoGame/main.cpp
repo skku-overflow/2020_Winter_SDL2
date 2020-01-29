@@ -1,7 +1,7 @@
 #include <SDL.h>
 #include <SDL_main.h>
 
-#include "Game.h"
+#include "Headers/Game.h"
 
 Game* game = nullptr;
 

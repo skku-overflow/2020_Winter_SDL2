@@ -1,6 +1,6 @@
 #ifndef MAP
 #define MAP
-#include "Game.h"
+#include "Headers/Game.h"
 
 class Map {
 public:
