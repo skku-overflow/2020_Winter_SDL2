@@ -1,0 +1,25 @@
+﻿  game.cpp
+c:\users\beni\desktop\project\project\ecs.h(65): error C2760: 구문 오류: ']'은(는) 예기치 않은 토큰입니다. 필요한 토큰은 '식'입니다.
+  c:\users\beni\desktop\project\project\ecs.h(65): note: 이 진단은 컴파일러 생성 함수 'bool Entity::hasComponent(void) const'에서 수행되었습니다.
+  Vector2D.cpp
+c:\users\beni\desktop\project\project\vector2d.cpp(14): error C2355: 'this': 비정적 멤버 함수 또는 비정적 데이터 멤버 이니셜라이저 안에서만 참조할 수 있습니다.
+c:\users\beni\desktop\project\project\vector2d.cpp(15): error C2355: 'this': 비정적 멤버 함수 또는 비정적 데이터 멤버 이니셜라이저 안에서만 참조할 수 있습니다.
+c:\users\beni\desktop\project\project\vector2d.cpp(17): error C2355: 'this': 비정적 멤버 함수 또는 비정적 데이터 멤버 이니셜라이저 안에서만 참조할 수 있습니다.
+c:\users\beni\desktop\project\project\vector2d.cpp(21): error C2355: 'this': 비정적 멤버 함수 또는 비정적 데이터 멤버 이니셜라이저 안에서만 참조할 수 있습니다.
+c:\users\beni\desktop\project\project\vector2d.cpp(22): error C2355: 'this': 비정적 멤버 함수 또는 비정적 데이터 멤버 이니셜라이저 안에서만 참조할 수 있습니다.
+c:\users\beni\desktop\project\project\vector2d.cpp(24): error C2355: 'this': 비정적 멤버 함수 또는 비정적 데이터 멤버 이니셜라이저 안에서만 참조할 수 있습니다.
+c:\users\beni\desktop\project\project\vector2d.cpp(28): error C2355: 'this': 비정적 멤버 함수 또는 비정적 데이터 멤버 이니셜라이저 안에서만 참조할 수 있습니다.
+c:\users\beni\desktop\project\project\vector2d.cpp(29): error C2355: 'this': 비정적 멤버 함수 또는 비정적 데이터 멤버 이니셜라이저 안에서만 참조할 수 있습니다.
+c:\users\beni\desktop\project\project\vector2d.cpp(31): error C2355: 'this': 비정적 멤버 함수 또는 비정적 데이터 멤버 이니셜라이저 안에서만 참조할 수 있습니다.
+c:\users\beni\desktop\project\project\vector2d.cpp(35): error C2355: 'this': 비정적 멤버 함수 또는 비정적 데이터 멤버 이니셜라이저 안에서만 참조할 수 있습니다.
+c:\users\beni\desktop\project\project\vector2d.cpp(36): error C2355: 'this': 비정적 멤버 함수 또는 비정적 데이터 멤버 이니셜라이저 안에서만 참조할 수 있습니다.
+c:\users\beni\desktop\project\project\vector2d.cpp(38): error C2355: 'this': 비정적 멤버 함수 또는 비정적 데이터 멤버 이니셜라이저 안에서만 참조할 수 있습니다.
+c:\users\beni\desktop\project\project\vector2d.cpp(51): error C2805: 이항 'operator +='에 매개 변수가 너무 적습니다.
+c:\users\beni\desktop\project\project\vector2d.cpp(51): error C2355: 'this': 비정적 멤버 함수 또는 비정적 데이터 멤버 이니셜라이저 안에서만 참조할 수 있습니다.
+c:\users\beni\desktop\project\project\vector2d.cpp(53): error C2805: 이항 'operator -='에 매개 변수가 너무 적습니다.
+c:\users\beni\desktop\project\project\vector2d.cpp(53): error C2355: 'this': 비정적 멤버 함수 또는 비정적 데이터 멤버 이니셜라이저 안에서만 참조할 수 있습니다.
+c:\users\beni\desktop\project\project\vector2d.cpp(55): error C2805: 이항 'operator *='에 매개 변수가 너무 적습니다.
+c:\users\beni\desktop\project\project\vector2d.cpp(55): error C2355: 'this': 비정적 멤버 함수 또는 비정적 데이터 멤버 이니셜라이저 안에서만 참조할 수 있습니다.
+c:\users\beni\desktop\project\project\vector2d.cpp(57): error C2805: 이항 'operator /='에 매개 변수가 너무 적습니다.
+c:\users\beni\desktop\project\project\vector2d.cpp(57): error C2355: 'this': 비정적 멤버 함수 또는 비정적 데이터 멤버 이니셜라이저 안에서만 참조할 수 있습니다.
+  코드를 생성하고 있습니다...
