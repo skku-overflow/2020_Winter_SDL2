@@ -76,6 +76,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <IncludePath>D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\libs\SDL2-2.0.10\include;D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\libs\SDL2_image-2.0.1\include;$(IncludePath)</IncludePath>
     <LibraryPath>D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\libs\SDL2_image-2.0.1\lib\x64;D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\libs\SDL2-2.0.10\lib\x64;$(LibraryPath)</LibraryPath>
+    <OutDir>.\Output</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <IncludePath>D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\libs\SDL2_image-2.0.1\include;D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\libs\SDL2-2.0.10\include;$(IncludePath)</IncludePath>
@@ -143,39 +144,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="GameObject.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-    </ClCompile>
     <ClCompile Include="main.cpp">
       <SDLCheck Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</SDLCheck>
     </ClCompile>
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Map.cpp" />
-    <ClCompile Include="oldgame.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-    </ClCompile>
     <ClCompile Include="TextureManager.cpp" />
     <ClCompile Include="Vector2D.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Components.h" />
-    <ClInclude Include="ECS.h" />
-    <ClInclude Include="Game.h" />
-    <ClInclude Include="GameObject.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-    </ClInclude>
-    <ClInclude Include="Map.h" />
-    <ClInclude Include="PositionComponent.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-    </ClInclude>
     <ClInclude Include="resource.h" />
-    <ClInclude Include="SpriteComponent.h" />
-    <ClInclude Include="TextureManager.h" />
-    <ClInclude Include="TransformComponent.h" />
-    <ClInclude Include="Vector2D.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="..\images\creeper.png" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="DemoGame.rc" />

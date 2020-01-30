@@ -1,10 +1,14 @@
 #pragma once
 #include "Components.h"
 #include "../Headers/Vector2D.h"
+#define DEFAULT 3
 
 class TransformComponent : public Component {
 public:
 	Vector2D position;
+	Vector2D velocity;
+
+	int speed = DEFAULT;
 
 	TransformComponent() {
 		position.x = 0.0f;
@@ -13,15 +17,18 @@ public:
 
 	TransformComponent(float x, float y) {
 		position.x = x;
-		position.x = y;
+		position.y = y;
 	}
 
 	void init() override {
 		cout << "Initialized Position Component" << endl;
+
+		velocity.setVector(0,0);
 	}
 
 	void update() override {
-		
+		position.x += velocity.x* speed;
+		position.y += velocity.y * speed;
 	}
 
 	

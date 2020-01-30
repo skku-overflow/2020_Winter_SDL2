@@ -11,6 +11,8 @@ public:
 	Vector2D();
 	Vector2D(float x, float y);
 
+	void setVector(float x, float y);
+
 	Vector2D& Add(const Vector2D& vec);
 	Vector2D& Sub(const Vector2D& vec);
 	Vector2D& Mul(const Vector2D& vec);

@@ -9,10 +9,13 @@
 using namespace std;
 
 Map* map;
-SDL_Renderer* Game::renderer = nullptr;
-
 Manager manager;
+
+SDL_Renderer* Game::renderer = nullptr;
+SDL_Event Game::event;
+
 auto& player(manager.addEntity());
+auto& enemy(manager.addEntity());
 
 Game::Game() {
 
@@ -57,12 +60,17 @@ void Game::init(const char* title, int width, int height, bool fullscreen) {
 
 	map = new Map();
 
-	player.addComponent<TransformComponent>(200,200);
-	player.addComponent<SpriteComponent>("../images/creeper.png");
+	player.addComponent<TransformComponent>(296,117);
+	player.addComponent<SpriteComponent>("images/creeper.png");
+	player.addComponent<KeyboardController>();
+
+	enemy.addComponent<TransformComponent>(500, 500);
+	enemy.addComponent<SpriteComponent>("images/enemy.png");
+	enemy.addComponent<KeyboardController>();
 }
 
 void Game::handleEvents() {
-	SDL_Event event;
+
 	SDL_PollEvent(&event);
 	switch (event.type) {
 	case SDL_QUIT:
@@ -87,11 +95,13 @@ void Game::update() {
 	cout << "player: (" << player.getComponent<TransformComponent>().position.x << ", " <<
 		player.getComponent<TransformComponent>().position.y << ")" << endl;
 
-	player.getComponent<TransformComponent>().position.Add(Vector2D(2, 4));
+	player.getComponent<TransformComponent>().position.Add(Vector2D(0,0));
 
 	if (player.getComponent<TransformComponent>().position.x > 500) {
-		player.getComponent<SpriteComponent>().setTex("../images/enemy.png");
+		player.getComponent<SpriteComponent>().setTex("images/enemy.png");
 	}
+	else 
+		player.getComponent<SpriteComponent>().setTex("images/creeper.png");
 }
 
 void Game::render() {

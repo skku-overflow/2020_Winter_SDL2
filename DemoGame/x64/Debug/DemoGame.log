@@ -1,14 +1,13 @@
-﻿  Game.cpp
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(438,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
+  Game.cpp
 D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\ECS\ECS.h(67,33): warning C4244:  'argument': conversion from '_Ty' to 'float', possible loss of data
 D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\ECS\ECS.h(67,33): warning C4244:         with
 D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\ECS\ECS.h(67,33): warning C4244:         [
 D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\ECS\ECS.h(67,33): warning C4244:             _Ty=int
 D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\ECS\ECS.h(67,33): warning C4244:         ]
-  Map.cpp
-  Generating Code...
-D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.cpp(60): message :  see reference to function template instantiation 'T &Entity::addComponent<TransformComponent,int,int>(int &&,int &&)' being compiled
-D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.cpp(60): message :         with
-D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.cpp(60): message :         [
-D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.cpp(60): message :             T=TransformComponent
-D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.cpp(60): message :         ]
-  DemoGame.vcxproj -> D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\x64\Debug\DemoGame.exe
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.cpp(63): message :  see reference to function template instantiation 'T &Entity::addComponent<TransformComponent,int,int>(int &&,int &&)' being compiled
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.cpp(63): message :         with
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.cpp(63): message :         [
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.cpp(63): message :             T=TransformComponent
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.cpp(63): message :         ]
+  DemoGame.vcxproj -> D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\.\Output\DemoGame.exe
