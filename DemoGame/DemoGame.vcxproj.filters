@@ -16,28 +16,38 @@
     <Filter Include="Header Files\ECS">
       <UniqueIdentifier>{bf36369d-3b8f-40e1-a033-272fde69cdd7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Old">
+      <UniqueIdentifier>{642c6e0d-8e0a-43e6-9e3f-ab2f71131ac2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="GameObject.cpp">
+    <ClCompile Include="Game.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="Map.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureManager.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector2D.cpp">
       <Filter>Src</Filter>
     </ClCompile>
     <ClCompile Include="oldgame.cpp">
-      <Filter>Src</Filter>
+      <Filter>Old</Filter>
     </ClCompile>
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="Map.cpp" />
-    <ClCompile Include="TextureManager.cpp" />
-    <ClCompile Include="Vector2D.cpp" />
-    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="GameObject.cpp">
+      <Filter>Old</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="TextureManager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GameObject.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Map.h">
@@ -62,6 +72,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="resource.h" />
+    <ClInclude Include="GameObject.h">
+      <Filter>Old</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="..\images\creeper.png">
