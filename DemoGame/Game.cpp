@@ -105,7 +105,6 @@ void Game::update() {
 	if (Collision::boxInturrupt(player.getComponent<ColliderComponent>().collider,
 		wall.getComponent<ColliderComponent>().collider)) {
 		cout << "Wall hit!" << endl;
-		//player.getComponent<SpriteComponent>().setTex("images/enemy.png");
 	}
 
 	if (player.getComponent<TransformComponent>().position.x > 500 ||
