@@ -2,9 +2,11 @@
 #include "Headers/Game.h"
 #include "Headers/TextureManager.h"
 #include "Headers/Map.h"
+#include "Headers/Vector2D.h"
+#include "Headers/Collision.h"
+
 #include "ECS/ECS.h"
 #include "ECS/Components.h"
-#include "Headers/Vector2D.h"
 
 using namespace std;
 
@@ -16,6 +18,7 @@ SDL_Event Game::event;
 
 auto& player(manager.addEntity());
 auto& enemy(manager.addEntity());
+auto& wall(manager.addEntity());
 
 Game::Game() {
 
@@ -60,13 +63,19 @@ void Game::init(const char* title, int width, int height, bool fullscreen) {
 
 	map = new Map();
 
-	player.addComponent<TransformComponent>(296,117);
+	player.addComponent<TransformComponent>(296,117,400,400,0.1);
 	player.addComponent<SpriteComponent>("images/creeper.png");
 	player.addComponent<KeyboardController>();
+	player.addComponent<ColliderComponent>("player");
 
-	enemy.addComponent<TransformComponent>(500, 500);
+	enemy.addComponent<TransformComponent>(500, 500,400,400,0.1);
 	enemy.addComponent<SpriteComponent>("images/enemy.png");
 	enemy.addComponent<KeyboardController>();
+	enemy.addComponent<ColliderComponent>("enemy");
+
+	wall.addComponent<TransformComponent>(300.0f, 300.0f, 300, 20, 1);
+	wall.addComponent<SpriteComponent>("images/dirt.png");
+	wall.addComponent<ColliderComponent>("wall");
 }
 
 void Game::handleEvents() {
@@ -83,25 +92,30 @@ void Game::handleEvents() {
 }
 
 void Game::update() {
-	cnt++;
-	cout << "[cnt] " << cnt << endl;
-	// destR = { 2*cnt,cnt,32,32 };
-
+	monitoring();
 
 	// map->LoadMap();		// pass in the config, external txt, xml, etc. to the LoadMap() if we have map
 	manager.refresh();
 	manager.update();
 
-	cout << "player: (" << player.getComponent<TransformComponent>().position.x << ", " <<
-		player.getComponent<TransformComponent>().position.y << ")" << endl;
+	// vector change
+	// player.getComponent<TransformComponent>().position.Add(Vector2D(2, 0));
 
-	player.getComponent<TransformComponent>().position.Add(Vector2D(0,0));
+	// custom
+	if (Collision::boxInturrupt(player.getComponent<ColliderComponent>().collider,
+		wall.getComponent<ColliderComponent>().collider)) {
+		cout << "Wall hit!" << endl;
+		//player.getComponent<SpriteComponent>().setTex("images/enemy.png");
+	}
 
-	if (player.getComponent<TransformComponent>().position.x > 500) {
+	if (player.getComponent<TransformComponent>().position.x > 500 ||
+		Collision::boxInturrupt(player.getComponent<ColliderComponent>().collider,
+			wall.getComponent<ColliderComponent>().collider)) {
 		player.getComponent<SpriteComponent>().setTex("images/enemy.png");
 	}
-	else 
+	else
 		player.getComponent<SpriteComponent>().setTex("images/creeper.png");
+
 }
 
 void Game::render() {
@@ -117,4 +131,16 @@ void Game::clean() {
 	SDL_DestroyRenderer(renderer);
 	SDL_Quit();
 	cout << "Game quit" << endl;
+}
+
+void Game::monitoring() {
+	cnt++;
+	if (!(cnt % 100)) {
+		cout << "[frame] " << cnt << endl;
+
+		cout << "player: (" << player.getComponent<TransformComponent>().position.x << ", " <<
+			player.getComponent<TransformComponent>().position.y << ")" << endl;
+	}
+	// destR = { 2*cnt,cnt,32,32 };
+
 }

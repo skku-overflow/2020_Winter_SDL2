@@ -23,6 +23,8 @@ public:
 	static SDL_Renderer* renderer;
 	static SDL_Event event;
 
+	void monitoring();
+
 private:
 	int cnt=0;
 	bool isRunning;

@@ -144,6 +144,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Headers\Collision.cpp" />
     <ClCompile Include="main.cpp">
       <SDLCheck Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</SDLCheck>
     </ClCompile>
@@ -153,6 +154,8 @@
     <ClCompile Include="Vector2D.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ECS\ColliderComponent.h" />
+    <ClInclude Include="Headers\Collision.h" />
     <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>

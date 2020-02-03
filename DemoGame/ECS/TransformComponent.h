@@ -8,16 +8,36 @@ public:
 	Vector2D position;
 	Vector2D velocity;
 
+	int height = 32;
+	int width = 32;
+	float scale = 1;
+
 	int speed = DEFAULT;
+
 
 	TransformComponent() {
 		position.x = 0.0f;
 		position.y = 0.0f;
 	}
 
-	TransformComponent(float x, float y) {
+	TransformComponent(int sc) {
+		position.x = 0.0f;
+		position.y = 0.0f;
+		scale = sc;
+	}
+
+	TransformComponent(float x, float y, float sc) {
 		position.x = x;
 		position.y = y;
+		scale = sc;
+	}
+
+	TransformComponent(float x, float y, int w, int h, float sc) {
+		position.x = x;
+		position.y = y;
+		height = h;
+		width = w;
+		scale = sc;
 	}
 
 	void init() override {
