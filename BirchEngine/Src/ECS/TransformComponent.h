@@ -18,6 +18,11 @@ public:
 		position.Zero();
 	}
 
+	TransformComponents(int sc) {
+		position.Zero();
+		scale = sc;
+	}
+
 	TransformComponents(float x, float y) {
 		position.Zero();
 	}
