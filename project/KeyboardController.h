@@ -1,5 +1,5 @@
 #pragma once
-#include "../project/main.h"
+#include "main.h"
 #include "ECS.h"
 #include "Components.h"
 

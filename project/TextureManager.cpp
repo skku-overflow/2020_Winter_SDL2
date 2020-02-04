@@ -1,5 +1,3 @@
-#pragma once
-
 #include "main.h"
 
 SDL_Texture* TextureManager::LoadTexture(const char* texture) {
