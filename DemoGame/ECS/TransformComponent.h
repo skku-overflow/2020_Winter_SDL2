@@ -16,13 +16,11 @@ public:
 
 
 	TransformComponent() {
-		position.x = 0.0f;
-		position.y = 0.0f;
+		position.Zero();
 	}
 
 	TransformComponent(int sc) {
-		position.x = 0.0f;
-		position.y = 0.0f;
+		position.Zero();
 		scale = sc;
 	}
 
@@ -43,7 +41,7 @@ public:
 	void init() override {
 		cout << "Initialized Position Component" << endl;
 
-		velocity.setVector(0,0);
+		velocity.Zero();
 	}
 
 	void update() override {

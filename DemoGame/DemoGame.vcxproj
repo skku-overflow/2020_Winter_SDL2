@@ -100,7 +100,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <SDLCheck>true</SDLCheck>
+      <SDLCheck>false</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\libs\SDL2_image-2.0.1\include;D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\libs\SDL2-2.0.10\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -144,7 +144,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Headers\Collision.cpp" />
+    <ClCompile Include="Collision.cpp" />
+    <ClCompile Include="ECS\ECS.cpp" />
     <ClCompile Include="main.cpp">
       <SDLCheck Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</SDLCheck>
     </ClCompile>
@@ -155,11 +156,29 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ECS\ColliderComponent.h" />
+    <ClInclude Include="ECS\Components.h" />
+    <ClInclude Include="ECS\ECS.h" />
+    <ClInclude Include="ECS\KeyBoardController.h" />
+    <ClInclude Include="ECS\PositionComponent.h" />
+    <ClInclude Include="ECS\SpriteComponent.h" />
+    <ClInclude Include="ECS\TileComponent.h" />
+    <ClInclude Include="ECS\TransformComponent.h" />
     <ClInclude Include="Headers\Collision.h" />
+    <ClInclude Include="Headers\Game.h" />
+    <ClInclude Include="Headers\Map.h" />
+    <ClInclude Include="Headers\TextureManager.h" />
+    <ClInclude Include="Headers\Vector2D.h" />
     <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="DemoGame.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DemoGame.aps" />
+    <None Include="libpng16-16.dll" />
+    <None Include="SDL2.dll" />
+    <None Include="SDL2_image.dll" />
+    <None Include="zlib1.dll" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -6,3 +6,4 @@
 #include "TransformComponent.h"
 #include "KeyBoardController.h"
 #include "ColliderComponent.h"
+#include "TileComponent.h"
