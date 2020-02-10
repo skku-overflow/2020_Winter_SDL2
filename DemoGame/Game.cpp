@@ -8,21 +8,19 @@
 #include "ECS/ECS.h"
 #include "ECS/Components.h"
 
-using namespace std;
-
 Map* map;
 Manager manager;
 
 SDL_Renderer* Game::renderer = nullptr;
 SDL_Event Game::event;
 
-vector<ColliderComponent*> Game::colliders;
+std::vector<ColliderComponent*> Game::colliders;
 
 auto& player(manager.addEntity());
 auto& enemy(manager.addEntity());
 auto& wall(manager.addEntity());
 
-enum groupLabels : size_t {
+enum groupLabels : std::size_t {
 	groupMap,
 	groupPlayers,
 	groupEnemies,
@@ -75,12 +73,12 @@ void Game::init(const char* title, int width, int height, bool fullscreen) {
 	/* Creating ... with LoadTexture() but without class */
 	// playerTex = TextureManager::LoadTexture("../images/creeper.png", renderer);
 
-	map = new Map();
+	//map = new Map();
 
 	Map::LoadMap("images/maptile.png",16,16);
 
 	player.addComponent<TransformComponent>(296,117,400,400,0.1);
-	player.addComponent<SpriteComponent>("images/creeper.png");
+	player.addComponent<SpriteComponent>("images/creeper_idle.png", true);
 	player.addComponent<KeyboardController>();
 	player.addComponent<ColliderComponent>("player");
 	player.addGroup(groupPlayers);
@@ -124,7 +122,7 @@ void Game::update() {
 	// custom
 	if (Collision::boxInterrupt(player.getComponent<ColliderComponent>().collider,
 		wall.getComponent<ColliderComponent>().collider)) {
-		cout << "Wall hit!" << endl;
+		std::cout << "Wall hit!" << std::endl;
 		player.getComponent<TransformComponent>().velocity * -1;
 		enemy.getComponent<TransformComponent>().velocity * -1;
 	}
@@ -162,7 +160,7 @@ void Game::clean() {
 	SDL_DestroyWindow(window);
 	SDL_DestroyRenderer(renderer);
 	SDL_Quit();
-	cout << "Game quit" << endl;
+	std::cout << "Game quit" << std::endl;
 }
 
 void Game::AddTile(int id, int x, int y) {
@@ -175,10 +173,10 @@ void Game::AddTile(int id, int x, int y) {
 void Game::monitoring() {
 	cnt++;
 	if (!(cnt % 100)) {
-		cout << "[frame] " << cnt << endl;
+		std::cout << "[frame] " << cnt << std::endl;
 
-		cout << "player: (" << player.getComponent<TransformComponent>().position.x << ", " <<
-			player.getComponent<TransformComponent>().position.y << ")" << endl;
+		std::cout << "player: (" << player.getComponent<TransformComponent>().position.x << ", " <<
+			player.getComponent<TransformComponent>().position.y << ")" << std::endl;
 	}
 	// destR = { 2*cnt,cnt,32,32 };
 

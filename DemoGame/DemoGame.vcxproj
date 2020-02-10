@@ -145,6 +145,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Collision.cpp" />
+    <ClCompile Include="ECS\Collision.cpp" />
     <ClCompile Include="ECS\ECS.cpp" />
     <ClCompile Include="main.cpp">
       <SDLCheck Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</SDLCheck>
@@ -155,6 +156,7 @@
     <ClCompile Include="Vector2D.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ECS\Animation.h" />
     <ClInclude Include="ECS\ColliderComponent.h" />
     <ClInclude Include="ECS\Components.h" />
     <ClInclude Include="ECS\ECS.h" />
@@ -179,6 +181,17 @@
     <None Include="SDL2.dll" />
     <None Include="SDL2_image.dll" />
     <None Include="zlib1.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="images\creeper.png" />
+    <Image Include="images\dirt.png" />
+    <Image Include="images\enemy.png" />
+    <Image Include="images\grass.png" />
+    <Image Include="images\map.png" />
+    <Image Include="images\water.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="images\maptile.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

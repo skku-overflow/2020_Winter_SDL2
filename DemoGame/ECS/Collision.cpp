@@ -1,5 +1,5 @@
-#include "Headers/Collision.h"
-#include "ECS/ColliderComponent.h"
+#include "../Headers/Collision.h"
+#include "ColliderComponent.h"
 #include <iostream>
 
 using namespace std;
@@ -22,4 +22,4 @@ bool Collision::boxInterrupt(const ColliderComponent& colA, const ColliderCompon
 	}
 	else
 		return false;
-}#pragma once
+}

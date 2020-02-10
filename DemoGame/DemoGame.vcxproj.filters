@@ -42,6 +42,9 @@
     <ClCompile Include="ECS\ECS.cpp">
       <Filter>Src</Filter>
     </ClCompile>
+    <ClCompile Include="ECS\Collision.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h" />
@@ -84,6 +87,9 @@
     <ClInclude Include="ECS\Components.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ECS\Animation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="DemoGame.rc">
@@ -96,5 +102,28 @@
     <None Include="SDL2.dll" />
     <None Include="SDL2_image.dll" />
     <None Include="zlib1.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="images\creeper.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\dirt.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\enemy.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\grass.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\map.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\water.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="images\maptile.txt" />
   </ItemGroup>
 </Project>
