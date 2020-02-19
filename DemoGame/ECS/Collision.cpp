@@ -17,7 +17,7 @@ bool Collision::boxInterrupt(const SDL_Rect& recA, const SDL_Rect& recB) {
 
 bool Collision::boxInterrupt(const ColliderComponent& colA, const ColliderComponent& colB) {
 	if (boxInterrupt(colA.collider, colB.collider)) {
-		cout << colA.tag << " hit : " << colB.tag << endl;
+		//cout << colA.tag << " hit : " << colB.tag << endl;
 		return true;
 	}
 	else

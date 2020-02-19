@@ -16,9 +16,13 @@ SDL_Event Game::event;
 
 std::vector<ColliderComponent*> Game::colliders;
 
+bool Game::isRunning = false;
+
 auto& player(manager.addEntity());
 auto& enemy(manager.addEntity());
 auto& wall(manager.addEntity());
+
+const char* mapfile = "images/terrain_ss.png";
 
 enum groupLabels : std::size_t {
 	groupMap,
@@ -31,6 +35,9 @@ enum groupLabels : std::size_t {
 //auto& tile1(manager.addEntity());
 //auto& tile2(manager.addEntity());
 
+auto& tiles(manager.getGroup(groupMap));
+auto& players(manager.getGroup(groupPlayers));
+auto& enemies(manager.getGroup(groupEnemies));
 
 Game::Game() {
 
@@ -75,7 +82,7 @@ void Game::init(const char* title, int width, int height, bool fullscreen) {
 
 	//map = new Map();
 
-	Map::LoadMap("images/maptile.map",16,16);
+	Map::LoadMap("images/map.map",25,20);
 
 	player.addComponent<TransformComponent>(296,117,420,420,0.1);
 	player.addComponent<SpriteComponent>("images/creeper_idle.png", true);
@@ -83,17 +90,12 @@ void Game::init(const char* title, int width, int height, bool fullscreen) {
 	player.addComponent<ColliderComponent>("player");
 	player.addGroup(groupPlayers);
 
-	enemy.addComponent<TransformComponent>(500, 500,420,420,0.1);
+	/*enemy.addComponent<TransformComponent>(500, 500,420,420,0.1);
 	enemy.addComponent<SpriteComponent>("images/enemy.png");
 	enemy.addComponent<P2_KeyboardController>();
 	enemy.addComponent<ColliderComponent>("enemy");
-	enemy.addGroup(groupEnemies);
+	enemy.addGroup(groupEnemies);*/
 
-
-	wall.addComponent<TransformComponent>(300.0f, 300.0f, 300, 20, 1);
-	wall.addComponent<SpriteComponent>("images/dirt.png");
-	wall.addComponent<ColliderComponent>("wall");
-	wall.addGroup(groupMap);
 
 }
 
@@ -116,6 +118,14 @@ void Game::update() {
 	// map->LoadMap();		// pass in the config, external txt, xml, etc. to the LoadMap() if we have map
 	manager.refresh();
 	manager.update();
+
+	/*Vector2D pVel = player.getComponent<TransformComponent>().velocity;
+	int pSpeed = player.getComponent<TransformComponent>().speed;
+
+	for (auto t : tiles) {
+		t->getComponent<TileComponent>().destRect.x += -(pVel.x * pSpeed);
+		t->getComponent<TileComponent>().destRect.y += -(pVel.y * pSpeed);
+	}*/
 
 	// vector change
 	// player.getComponent<TransformComponent>().position.Add(Vector2D(2, 0));
@@ -142,10 +152,6 @@ void Game::update() {
 
 }
 
-auto& tiles(manager.getGroup(groupMap));
-auto& players(manager.getGroup(groupPlayers));
-auto& enemies(manager.getGroup(groupEnemies));
-
 void Game::render() {
 	SDL_RenderClear(renderer);
 	
@@ -168,9 +174,9 @@ void Game::clean() {
 	std::cout << "Game quit" << std::endl;
 }
 
-void Game::AddTile(int id, int x, int y) {
+void Game::AddTile(int srcX, int srcY, int xpos, int ypos) {
 	auto& tile(manager.addEntity());
-	tile.addComponent<TileComponent>(x, y, 32, 32, id);
+	tile.addComponent<TileComponent>(srcX, srcY, xpos, ypos, mapfile);
 	tile.addGroup(groupMap);
 }
 

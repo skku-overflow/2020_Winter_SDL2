@@ -177,6 +177,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="DemoGame.aps" />
+    <None Include="images\map.map" />
     <None Include="images\maptile.map" />
     <None Include="libpng16-16.dll" />
     <None Include="SDL2.dll" />
@@ -189,10 +190,8 @@
     <Image Include="images\dirt.png" />
     <Image Include="images\enemy.png" />
     <Image Include="images\grass.png" />
+    <Image Include="images\terrain_ss.png" />
     <Image Include="images\water.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="images\maptile.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
