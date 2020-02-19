@@ -119,13 +119,13 @@ void Game::update() {
 	manager.refresh();
 	manager.update();
 
-	/*Vector2D pVel = player.getComponent<TransformComponent>().velocity;
+	Vector2D pVel = player.getComponent<TransformComponent>().velocity;
 	int pSpeed = player.getComponent<TransformComponent>().speed;
 
 	for (auto t : tiles) {
 		t->getComponent<TileComponent>().destRect.x += -(pVel.x * pSpeed);
 		t->getComponent<TileComponent>().destRect.y += -(pVel.y * pSpeed);
-	}*/
+	}
 
 	// vector change
 	// player.getComponent<TransformComponent>().position.Add(Vector2D(2, 0));

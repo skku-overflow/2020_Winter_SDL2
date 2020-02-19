@@ -20,9 +20,8 @@ public:
 	}
 
 	TransformComponent(int sc) {
-		/*position.x = 400;
-		position.y = 320;*/
-		position.Zero();
+		position.x = 400;
+		position.y = 320;
 		scale = sc;
 	}
 
