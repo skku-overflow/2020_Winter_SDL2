@@ -28,9 +28,6 @@ D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\ECS\ECS.h(88,28): 
 D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\ECS\ECS.h(88,28): warning C4244:         [
 D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\ECS\ECS.h(88,28): warning C4244:             _Ty=double
 D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\ECS\ECS.h(88,28): warning C4244:         ]
-  Map.cpp
-  TextureManager.cpp
-  Generating Code...
 D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.cpp(80): message :  see reference to function template instantiation 'T &Entity::addComponent<TransformComponent,int,int,int,int,double>(int &&,int &&,int &&,int &&,double &&)' being compiled
 D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.cpp(80): message :         with
 D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.cpp(80): message :         [

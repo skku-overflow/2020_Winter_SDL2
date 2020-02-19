@@ -177,6 +177,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="DemoGame.aps" />
+    <None Include="images\maptile.map" />
     <None Include="libpng16-16.dll" />
     <None Include="SDL2.dll" />
     <None Include="SDL2_image.dll" />
@@ -184,10 +185,10 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="images\creeper.png" />
+    <Image Include="images\creeper_idle.png" />
     <Image Include="images\dirt.png" />
     <Image Include="images\enemy.png" />
     <Image Include="images\grass.png" />
-    <Image Include="images\map.png" />
     <Image Include="images\water.png" />
   </ItemGroup>
   <ItemGroup>

@@ -102,6 +102,7 @@
     <None Include="SDL2.dll" />
     <None Include="SDL2_image.dll" />
     <None Include="zlib1.dll" />
+    <None Include="images\maptile.map" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="images\creeper.png">
@@ -116,10 +117,10 @@
     <Image Include="images\grass.png">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="images\map.png">
+    <Image Include="images\water.png">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="images\water.png">
+    <Image Include="images\creeper_idle.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>

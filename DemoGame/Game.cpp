@@ -75,18 +75,19 @@ void Game::init(const char* title, int width, int height, bool fullscreen) {
 
 	//map = new Map();
 
-	Map::LoadMap("images/maptile.png",16,16);
+	Map::LoadMap("images/maptile.map",16,16);
 
-	player.addComponent<TransformComponent>(296,117,400,400,0.1);
+	player.addComponent<TransformComponent>(296,117,420,420,0.1);
 	player.addComponent<SpriteComponent>("images/creeper_idle.png", true);
 	player.addComponent<KeyboardController>();
 	player.addComponent<ColliderComponent>("player");
 	player.addGroup(groupPlayers);
 
-	enemy.addComponent<TransformComponent>(500, 500,400,400,0.1);
+	enemy.addComponent<TransformComponent>(500, 500,420,420,0.1);
 	enemy.addComponent<SpriteComponent>("images/enemy.png");
-	enemy.addComponent<KeyboardController>();
+	enemy.addComponent<P2_KeyboardController>();
 	enemy.addComponent<ColliderComponent>("enemy");
+	enemy.addGroup(groupEnemies);
 
 
 	wall.addComponent<TransformComponent>(300.0f, 300.0f, 300, 20, 1);
@@ -122,8 +123,12 @@ void Game::update() {
 	// custom
 	if (Collision::boxInterrupt(player.getComponent<ColliderComponent>().collider,
 		wall.getComponent<ColliderComponent>().collider)) {
-		std::cout << "Wall hit!" << std::endl;
+		std::cout << "PLAYER Wall hit!" << std::endl;
 		player.getComponent<TransformComponent>().velocity * -1;
+	}
+	if (Collision::boxInterrupt(enemy.getComponent<ColliderComponent>().collider,
+		wall.getComponent<ColliderComponent>().collider)) {
+		std::cout << "ENEMY Wall hit!" << std::endl;
 		enemy.getComponent<TransformComponent>().velocity * -1;
 	}
 
@@ -133,7 +138,7 @@ void Game::update() {
 		player.getComponent<SpriteComponent>().setTex("images/enemy.png");
 	}
 	else
-		player.getComponent<SpriteComponent>().setTex("images/creeper.png");
+		player.getComponent<SpriteComponent>().setTex("images/creeper_idle.png");
 
 }
 
@@ -147,10 +152,10 @@ void Game::render() {
 	for (auto& t : tiles) {
 		t->draw();
 	}
-	for (auto& p : tiles) {
+	for (auto& p : players) {
 		p->draw();
 	}
-	for (auto& e : tiles) {
+	for (auto& e : enemies) {
 		e->draw();
 	}
 	SDL_RenderPresent(renderer);
