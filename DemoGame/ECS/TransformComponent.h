@@ -25,6 +25,10 @@ public:
 		scale = sc;
 	}
 
+	TransformComponent(float x, float y) {
+		position.Zero();
+	}
+
 	TransformComponent(float x, float y, float sc) {
 		position.x = x;
 		position.y = y;
