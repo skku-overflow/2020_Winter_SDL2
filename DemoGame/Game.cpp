@@ -18,6 +18,7 @@ std::vector<ColliderComponent*> Game::colliders;
 
 bool Game::isRunning = false;
 
+auto& SYSTEM_MENU(manager.addEntity());
 auto& player(manager.addEntity());
 auto& enemy(manager.addEntity());
 auto& wall(manager.addEntity());
@@ -84,18 +85,19 @@ void Game::init(const char* title, int width, int height, bool fullscreen) {
 
 	Map::LoadMap("images/map.map",25,20);
 
+	SYSTEM_MENU.addComponent<SystemController>();
+
 	player.addComponent<TransformComponent>(420,300,420,420,0.1);
 	player.addComponent<SpriteComponent>("images/creeper_idle.png", true);
 	player.addComponent<KeyboardController>();
 	player.addComponent<ColliderComponent>("player");
 	player.addGroup(groupPlayers);
 
-	//enemy.addComponent<TransformComponent>(500, 500,420,420,0.1);					// Enemy Components
-	//enemy.addComponent<SpriteComponent>("images/enemy.png");
-	//enemy.addComponent<P2_KeyboardController>();
-	//enemy.addComponent<ColliderComponent>("enemy");
-	//enemy.addGroup(groupEnemies);
-
+	enemy.addComponent<TransformComponent>(500, 500,420,420,0.1);					// Enemy Components
+	enemy.addComponent<SpriteComponent>("images/enemy.png");
+	enemy.addComponent<P2_KeyboardController>();
+	enemy.addComponent<ColliderComponent>("enemy");
+	enemy.addGroup(groupEnemies);
 
 }
 
@@ -130,16 +132,11 @@ void Game::update() {
 	// vector change
 	// player.getComponent<TransformComponent>().position.Add(Vector2D(2, 0));
 
-	// custom
+	// Collision detection
 	//if (Collision::boxInterrupt(player.getComponent<ColliderComponent>().collider,		// ERROR Trigger
 	//	wall.getComponent<ColliderComponent>().collider)) {
 	//	std::cout << "PLAYER Wall hit!" << std::endl;
 	//	player.getComponent<TransformComponent>().velocity * -1;
-	//}
-	//if (Collision::boxInterrupt(enemy.getComponent<ColliderComponent>().collider,
-	//	wall.getComponent<ColliderComponent>().collider)) {
-	//	std::cout << "ENEMY Wall hit!" << std::endl;
-	//	enemy.getComponent<TransformComponent>().velocity * -1;
 	//}
 }
 

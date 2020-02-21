@@ -6,22 +6,21 @@ D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\ECS\SpriteComponen
 D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\ECS\SpriteComponent.h(71,34): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
 D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\ECS\ColliderComponent.h(31,33): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
 D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\ECS\ColliderComponent.h(32,34): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
-D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.cpp(126,68): warning C4244:  '+=': conversion from 'float' to 'int', possible loss of data
-D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.cpp(127,68): warning C4244:  '+=': conversion from 'float' to 'int', possible loss of data
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.cpp(128,68): warning C4244:  '+=': conversion from 'float' to 'int', possible loss of data
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.cpp(129,68): warning C4244:  '+=': conversion from 'float' to 'int', possible loss of data
 D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\ECS\ECS.h(88,28): warning C4244:  'argument': conversion from '_Ty' to 'float', possible loss of data
 D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\ECS\ECS.h(88,28): warning C4244:         with
 D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\ECS\ECS.h(88,28): warning C4244:         [
 D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\ECS\ECS.h(88,28): warning C4244:             _Ty=double
 D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\ECS\ECS.h(88,28): warning C4244:         ]
-D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.cpp(87): message :  see reference to function template instantiation 'T &Entity::addComponent<TransformComponent,int,int,int,int,double>(int &&,int &&,int &&,int &&,double &&)' being compiled
-D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.cpp(87): message :         with
-D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.cpp(87): message :         [
-D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.cpp(87): message :             T=TransformComponent
-D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.cpp(87): message :         ]
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.cpp(90): message :  see reference to function template instantiation 'T &Entity::addComponent<TransformComponent,int,int,int,int,double>(int &&,int &&,int &&,int &&,double &&)' being compiled
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.cpp(90): message :         with
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.cpp(90): message :         [
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.cpp(90): message :             T=TransformComponent
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.cpp(90): message :         ]
 D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\ECS\ECS.h(88,28): warning C4244:  'argument': conversion from '_Ty' to 'float', possible loss of data
 D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\ECS\ECS.h(88,28): warning C4244:         with
 D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\ECS\ECS.h(88,28): warning C4244:         [
 D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\ECS\ECS.h(88,28): warning C4244:             _Ty=int
 D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\ECS\ECS.h(88,28): warning C4244:         ]
-x64\Debug\Collision.obj : warning LNK4042: object specified more than once; extras ignored
   DemoGame.vcxproj -> D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\.\Output\DemoGame.exe

@@ -1,0 +1,11 @@
+﻿  Collision.cpp
+  Game.cpp
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\BirchEngine\Src\Collision.h(2,10): error C1083:  Cannot open include file: 'SDL.h': No such file or directory
+  main.cpp
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\BirchEngine\Src\Game.h(3,10): error C1083:  Cannot open include file: 'SDL.h': No such file or directory
+  Map.cpp
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\BirchEngine\Src\Game.h(3,10): error C1083:  Cannot open include file: 'SDL.h': No such file or directory
+  TextureManager.cpp
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\BirchEngine\Src\Game.h(3,10): error C1083:  Cannot open include file: 'SDL.h': No such file or directory
+  Generating Code...
+D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\BirchEngine\Src\Game.h(3,10): error C1083:  Cannot open include file: 'SDL.h': No such file or directory

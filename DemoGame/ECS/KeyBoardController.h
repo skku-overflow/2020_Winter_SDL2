@@ -4,6 +4,28 @@
 #include "ECS.h"
 #include "Components.h"
 
+using namespace std;
+
+class SystemController : public Component {
+public:
+	TransformComponent* transform;
+	SpriteComponent* sprite;
+
+	void init() override {
+		cout << "System Controller started" << endl;
+	}
+
+	void update() override {
+		if (Game::event.type == SDL_KEYUP) {
+			switch (Game::event.key.keysym.sym) {
+			case SDLK_ESCAPE:
+				Game::isRunning = false;
+			default:
+				break;
+			}
+		}
+	}
+};
 
 class KeyboardController : public Component {
 public:
@@ -38,7 +60,6 @@ public:
 				transform->velocity.x = 1;
 				if (sprite->animated)
 					sprite->Play("Walk");
-				break;
 			default:
 				break;
 			}
@@ -65,9 +86,6 @@ public:
 				transform->velocity.x = 0;
 				if (sprite->animated)
 					sprite->Play("Idle");
-				break;
-			case SDLK_ESCAPE:
-				Game::isRunning = false;
 			default:
 				break;
 			}
@@ -109,7 +127,6 @@ public:
 				transform->velocity.x = 1;
 				if (sprite->animated)
 					sprite->Play("Walk");
-				break;
 			default:
 				break;
 			}
@@ -136,7 +153,6 @@ public:
 				transform->velocity.x = 0;
 				if (sprite->animated)
 					sprite->Play("Idle");
-				break;
 			default:
 				break;
 			}
