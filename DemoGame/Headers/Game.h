@@ -29,6 +29,7 @@ public:
 	static vector<ColliderComponent*> colliders;
 
 	static bool isRunning;
+	static SDL_Rect camera;
 
 	void monitoring();
 

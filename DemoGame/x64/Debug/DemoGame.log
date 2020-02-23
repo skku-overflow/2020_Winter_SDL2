@@ -1,26 +1,4 @@
-﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(438,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(992,5): warning MSB8027: Two or more files with the name of Collision.cpp will produce outputs to the same location. This can lead to an incorrect build result.  The files involved are Collision.cpp, ECS\Collision.cpp.
-  Game.cpp
-D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\ECS\TransformComponent.h(25,11): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
-D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\ECS\SpriteComponent.h(70,33): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
-D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\ECS\SpriteComponent.h(71,34): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
-D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\ECS\ColliderComponent.h(31,33): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
-D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\ECS\ColliderComponent.h(32,34): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
-D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.cpp(128,68): warning C4244:  '+=': conversion from 'float' to 'int', possible loss of data
-D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.cpp(129,68): warning C4244:  '+=': conversion from 'float' to 'int', possible loss of data
-D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\ECS\ECS.h(88,28): warning C4244:  'argument': conversion from '_Ty' to 'float', possible loss of data
-D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\ECS\ECS.h(88,28): warning C4244:         with
-D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\ECS\ECS.h(88,28): warning C4244:         [
-D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\ECS\ECS.h(88,28): warning C4244:             _Ty=double
-D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\ECS\ECS.h(88,28): warning C4244:         ]
-D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.cpp(90): message :  see reference to function template instantiation 'T &Entity::addComponent<TransformComponent,int,int,int,int,double>(int &&,int &&,int &&,int &&,double &&)' being compiled
-D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.cpp(90): message :         with
-D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.cpp(90): message :         [
-D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.cpp(90): message :             T=TransformComponent
-D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\Game.cpp(90): message :         ]
-D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\ECS\ECS.h(88,28): warning C4244:  'argument': conversion from '_Ty' to 'float', possible loss of data
-D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\ECS\ECS.h(88,28): warning C4244:         with
-D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\ECS\ECS.h(88,28): warning C4244:         [
-D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\ECS\ECS.h(88,28): warning C4244:             _Ty=int
-D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\ECS\ECS.h(88,28): warning C4244:         ]
-  DemoGame.vcxproj -> D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\DemoGame\.\Output\DemoGame.exe
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(445,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(1002,5): warning MSB8027: Two or more files with the name of Collision.cpp will produce outputs to the same location. This can lead to an incorrect build result.  The files involved are Collision.cpp, ECS\Collision.cpp.
+  Map.cpp
+  DemoGame.vcxproj -> C:\Users\윤태웅\Programming\Dev\2020_Winter_SDL2\DemoGame\.\Output\DemoGame.exe

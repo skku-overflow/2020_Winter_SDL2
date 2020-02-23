@@ -74,8 +74,8 @@
     <LibraryPath>D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\libs\SDL2_image-2.0.1\lib\x86;C:\libs\SDL2-devel-2.0.10-VC\SDL2-2.0.10\lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\libs\SDL2-2.0.10\include;D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\libs\SDL2_image-2.0.1\include;$(IncludePath)</IncludePath>
-    <LibraryPath>D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\libs\SDL2_image-2.0.1\lib\x64;D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\libs\SDL2-2.0.10\lib\x64;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\윤태웅\Programming\Dev\2020_Winter_SDL2\libs\SDL2_image-2.0.1\include;C:\Users\윤태웅\Programming\Dev\2020_Winter_SDL2\libs\SDL2-2.0.10\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\윤태웅\Programming\Dev\2020_Winter_SDL2\libs\SDL2_image-2.0.1\lib\x64;C:\Users\윤태웅\Programming\Dev\2020_Winter_SDL2\libs\SDL2-2.0.10\lib\x64;$(LibraryPath)</LibraryPath>
     <OutDir>.\Output</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -102,12 +102,12 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>false</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\libs\SDL2_image-2.0.1\include;D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\libs\SDL2-2.0.10\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\윤태웅\Programming\Dev\2020_Winter_SDL2\libs\SDL2_image-2.0.1\include;C:\Users\윤태웅\Programming\Dev\2020_Winter_SDL2\libs\SDL2-2.0.10\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\libs\SDL2_image-2.0.1\lib\x64;D:\윤태웅\SKKU\CoMit\스터디\20 게임\DemoGame\libs\SDL2-2.0.10\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\윤태웅\Programming\Dev\2020_Winter_SDL2\libs\SDL2_image-2.0.1\lib\x64;C:\Users\윤태웅\Programming\Dev\2020_Winter_SDL2\libs\SDL2-2.0.10\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
