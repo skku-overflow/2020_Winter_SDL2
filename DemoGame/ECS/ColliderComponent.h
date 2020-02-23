@@ -20,13 +20,18 @@ public:
 		tag = t;
 	}
 
+	ColliderComponent(std::string t, int xpos, int ypos, int size) {
+		tag = t;
+		collider = { xpos, ypos, size, size };
+	}
+
 	void init() override {
 		if (!entity->hasComponent<TransformComponent>())
 			entity->addComponent<TransformComponent>();
 
 		transform = &entity->getComponent<TransformComponent>();
 
-		tex = TextureManager::LoadTexture("../images/enemy.png");
+		tex = TextureManager::LoadTexture("images/enemy.png");
 		srcR = { 0,0,32,32 };
 		destR = collider;
 

@@ -1,4 +1,30 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(445,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(1002,5): warning MSB8027: Two or more files with the name of Collision.cpp will produce outputs to the same location. This can lead to an incorrect build result.  The files involved are Collision.cpp, ECS\Collision.cpp.
-  Map.cpp
+  Game.cpp
+C:\Users\윤태웅\Programming\Dev\2020_Winter_SDL2\DemoGame\ECS\TransformComponent.h(25,11): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\윤태웅\Programming\Dev\2020_Winter_SDL2\DemoGame\ECS\SpriteComponent.h(70,33): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\윤태웅\Programming\Dev\2020_Winter_SDL2\DemoGame\ECS\SpriteComponent.h(71,34): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\윤태웅\Programming\Dev\2020_Winter_SDL2\DemoGame\ECS\ColliderComponent.h(45,34): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\윤태웅\Programming\Dev\2020_Winter_SDL2\DemoGame\ECS\ColliderComponent.h(46,35): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\윤태웅\Programming\Dev\2020_Winter_SDL2\DemoGame\ECS\TileComponent.h(21,16): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\윤태웅\Programming\Dev\2020_Winter_SDL2\DemoGame\ECS\TileComponent.h(22,16): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\윤태웅\Programming\Dev\2020_Winter_SDL2\DemoGame\ECS\TileComponent.h(29,27): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\윤태웅\Programming\Dev\2020_Winter_SDL2\DemoGame\ECS\TileComponent.h(30,27): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\윤태웅\Programming\Dev\2020_Winter_SDL2\DemoGame\Game.cpp(129,66): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\윤태웅\Programming\Dev\2020_Winter_SDL2\DemoGame\Game.cpp(130,66): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\윤태웅\Programming\Dev\2020_Winter_SDL2\DemoGame\ECS\ECS.h(88,28): warning C4244: 'argument': conversion from '_Ty' to 'float', possible loss of data
+          with
+          [
+              _Ty=double
+          ]
+C:\Users\윤태웅\Programming\Dev\2020_Winter_SDL2\DemoGame\Game.cpp(80): message : see reference to function template instantiation 'T &Entity::addComponent<TransformComponent,int,int,int,int,double>(int &&,int &&,int &&,int &&,double &&)' being compiled
+          with
+          [
+              T=TransformComponent
+          ]
+C:\Users\윤태웅\Programming\Dev\2020_Winter_SDL2\DemoGame\ECS\ECS.h(88,28): warning C4244: 'argument': conversion from '_Ty' to 'float', possible loss of data
+          with
+          [
+              _Ty=int
+          ]
   DemoGame.vcxproj -> C:\Users\윤태웅\Programming\Dev\2020_Winter_SDL2\DemoGame\.\Output\DemoGame.exe

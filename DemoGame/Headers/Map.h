@@ -7,13 +7,18 @@ using namespace std;
 
 class Map {
 public:
-	Map();
+	Map(const char* mfp, int ms, int ts);
 	~Map();	
 
-	static void LoadMap(string path, int sizeX, int sizeY);
+	void LoadMap(string path, int sizeX, int sizeY);
+	void AddTile(int srcX, int srcY, int xpos, int ypos);
 	//void DrawMap();
 
 private:
+	const char* mapFilePath;
+	int mapScale;
+	int tileSize;
+	int scaledSize;
 
 	//SDL_Rect src, dest;
 

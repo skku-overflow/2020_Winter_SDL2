@@ -8,7 +8,7 @@
 #include "ECS/ECS.h"
 #include "ECS/Components.h"
 
-Map* map;
+Map* imap;
 Manager manager;
 
 SDL_Renderer* Game::renderer = nullptr;
@@ -16,31 +16,19 @@ SDL_Event Game::event;
 
 SDL_Rect Game::camera = { 0, 0, 800, 640 };
 
-std::vector<ColliderComponent*> Game::colliders;
-
 bool Game::isRunning = false;
 
 auto& SYSTEM_MENU(manager.addEntity());
 auto& player(manager.addEntity());
 auto& enemy(manager.addEntity());
-auto& wall(manager.addEntity());
+// auto& wall(manager.addEntity());
 
-const char* mapfile = "images/terrain_ss.png";
-
-enum groupLabels : std::size_t {
-	groupMap,
-	groupPlayers,
-	groupEnemies,
-	groupColliders
-};
+// const char* mapfile = "images/terrain_ss.png";
 
 //auto& tile0(manager.addEntity());
 //auto& tile1(manager.addEntity());
 //auto& tile2(manager.addEntity());
 
-auto& tiles(manager.getGroup(groupMap));
-auto& players(manager.getGroup(groupPlayers));
-auto& enemies(manager.getGroup(groupEnemies));
 
 Game::Game() {
 
@@ -83,9 +71,9 @@ void Game::init(const char* title, int width, int height, bool fullscreen) {
 	/* Creating ... with LoadTexture() but without class */
 	// playerTex = TextureManager::LoadTexture("../images/creeper.png", renderer);
 
-	//map = new Map();
+	imap = new Map("images/terrain_ss.png",1,32);
 
-	Map::LoadMap("images/map.map",25,20);
+	imap->LoadMap("images/map.map",25,20);
 
 	SYSTEM_MENU.addComponent<SystemController>();
 
@@ -103,6 +91,11 @@ void Game::init(const char* title, int width, int height, bool fullscreen) {
 
 }
 
+auto& tiles(manager.getGroup(Game::groupMap));
+auto& players(manager.getGroup(Game::groupPlayers));
+auto& colliders(manager.getGroup(Game::groupPlayers));
+auto& enemies(manager.getGroup(Game::groupEnemies));
+
 void Game::handleEvents() {
 
 	SDL_PollEvent(&event);
@@ -119,9 +112,19 @@ void Game::handleEvents() {
 void Game::update() {
 	monitoring();
 
+	SDL_Rect playerCol = player.getComponent<ColliderComponent>().collider;
+	Vector2D playerPos = player.getComponent<TransformComponent>().position;
+
 	// map->LoadMap();		// pass in the config, external txt, xml, etc. to the LoadMap() if we have map
 	manager.refresh();
 	manager.update();
+
+	for (auto& c : colliders) {
+		SDL_Rect cCol = c->getComponent<ColliderComponent>().collider;
+		if (Collision::boxInterrupt(cCol, playerCol)) {
+			player.getComponent<TransformComponent>().position = playerPos;
+		}
+	}
 
 	camera.x = player.getComponent<TransformComponent>().position.x - 400;
 	camera.y = player.getComponent<TransformComponent>().position.y - 320;
@@ -161,6 +164,9 @@ void Game::render() {
 	for (auto& t : tiles) {
 		t->draw();
 	}
+	for (auto& c : colliders) {
+		c->draw();
+	}
 	for (auto& p : players) {
 		p->draw();
 	}
@@ -176,13 +182,6 @@ void Game::clean() {
 	SDL_Quit();
 	std::cout << "Game quit" << std::endl;
 }
-
-void Game::AddTile(int srcX, int srcY, int xpos, int ypos) {
-	auto& tile(manager.addEntity());
-	tile.addComponent<TileComponent>(srcX, srcY, xpos, ypos, mapfile);
-	tile.addGroup(groupMap);
-}
-
 
 void Game::monitoring() {
 	cnt++;
