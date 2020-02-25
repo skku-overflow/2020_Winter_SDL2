@@ -41,7 +41,7 @@ void Map::LoadMap(string path, int sizeX, int sizeY) {
 			if (c == '1') {
 				auto& tool(manager.addEntity());
 				tool.addComponent<ColliderComponent>("terrain", x * scaledSize, y * scaledSize, scaledSize);
-				mapFile.ignore();
+				tool.addGroup(Game::groupColliders);
 			}
 			mapFile.ignore();
 		}
@@ -55,4 +55,8 @@ void Map::AddTile(int srcX, int srcY, int xpos, int ypos) {
 	auto& tile(manager.addEntity());
 	tile.addComponent<TileComponent>(srcX, srcY, xpos, ypos, tileSize, mapScale, mapFilePath);
 	tile.addGroup(Game::groupMap);
+}
+
+int Map::getMapScale() {
+	return this->mapScale;
 }

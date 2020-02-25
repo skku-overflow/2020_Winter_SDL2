@@ -14,6 +14,8 @@ public:
 	void AddTile(int srcX, int srcY, int xpos, int ypos);
 	//void DrawMap();
 
+	int getMapScale();
+
 private:
 	const char* mapFilePath;
 	int mapScale;

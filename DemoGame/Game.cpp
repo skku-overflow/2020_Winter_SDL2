@@ -71,29 +71,29 @@ void Game::init(const char* title, int width, int height, bool fullscreen) {
 	/* Creating ... with LoadTexture() but without class */
 	// playerTex = TextureManager::LoadTexture("../images/creeper.png", renderer);
 
-	imap = new Map("images/terrain_ss.png",1,32);
+	imap = new Map("images/terrain_ss.png",3,32);
 
 	imap->LoadMap("images/map.map",25,20);
 
 	SYSTEM_MENU.addComponent<SystemController>();
 
-	player.addComponent<TransformComponent>(420,300,420,420,0.1);
+	player.addComponent<TransformComponent>(600,500,420,420,0.1);
 	player.addComponent<SpriteComponent>("images/creeper_idle.png", true);
 	player.addComponent<KeyboardController>();
 	player.addComponent<ColliderComponent>("player");
 	player.addGroup(groupPlayers);
 
-	enemy.addComponent<TransformComponent>(500, 500,420,420,0.1);					// Enemy Components
-	enemy.addComponent<SpriteComponent>("images/enemy.png");
-	enemy.addComponent<P2_KeyboardController>();
-	enemy.addComponent<ColliderComponent>("enemy");
-	enemy.addGroup(groupEnemies);
+	//enemy.addComponent<TransformComponent>(500, 500,420,420,0.1);					// Enemy Components
+	//enemy.addComponent<SpriteComponent>("images/enemy.png");
+	//enemy.addComponent<P2_KeyboardController>();
+	//enemy.addComponent<ColliderComponent>("enemy");
+	//enemy.addGroup(groupEnemies);
 
 }
 
 auto& tiles(manager.getGroup(Game::groupMap));
 auto& players(manager.getGroup(Game::groupPlayers));
-auto& colliders(manager.getGroup(Game::groupPlayers));
+auto& colliders(manager.getGroup(Game::groupColliders));
 auto& enemies(manager.getGroup(Game::groupEnemies));
 
 void Game::handleEvents() {
@@ -126,17 +126,17 @@ void Game::update() {
 		}
 	}
 
-	camera.x = player.getComponent<TransformComponent>().position.x - 400;
-	camera.y = player.getComponent<TransformComponent>().position.y - 320;
+	camera.x = player.getComponent<TransformComponent>().position.x - camera.w/2;
+	camera.y = player.getComponent<TransformComponent>().position.y - camera.h/2;
 
 	if (camera.x < 0)
 		camera.x = 0;
 	if (camera.y < 0)
 		camera.y = 0;
-	if (camera.x > camera.w)
-		camera.x = camera.w;
-	if (camera.y > camera.h)
-		camera.y = camera.h;
+	if (camera.x > camera.w*(imap->getMapScale() - 1))
+		camera.x = camera.w*(imap->getMapScale() - 1);
+	if (camera.y > camera.h*(imap->getMapScale() - 1))
+		camera.y = camera.h*(imap->getMapScale() - 1);
 
 	// Tilemap scrolling
 	/*Vector2D pVel = player.getComponent<TransformComponent>().velocity;
