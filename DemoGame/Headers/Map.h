@@ -6,7 +6,7 @@
 using namespace std;
 
 struct mapTile {
-	int srcX, srcY;
+	int tsX, tsY;
 };
 
 class Map {
@@ -19,7 +19,7 @@ public:
 	void mapRandomize();
 
 	void LoadMap();
-	void AddTile(int srcX, int srcY, int xpos, int ypos);
+	void AddTile(int srcX, int srcY, int epX, int epY);
 	//void DrawMap();
 
 	int getMapScale();

@@ -62,19 +62,10 @@ void Game::init(const char* title, int width, int height, bool fullscreen) {
 	else {
 		isRunning = false;
 	}
-
-	/* Creating texture and rendering without LoadTexture() */
-	// SDL_Surface* tmpSurface = IMG_Load("../images/creeper.png");
-	// playerTex = SDL_CreateTextureFromSurface(renderer, tmpSurface);
-	// SDL_FreeSurface(tmpSurface);
-
-	/* Creating ... with LoadTexture() but without class */
-	// playerTex = TextureManager::LoadTexture("../images/creeper.png", renderer);
-
+	
 	imap = new Map("images/terrain_ss.png",3,32);
 
 	imap->readMapFile("images/map.map",25,20);
-	cout << "|||||||||||||||||||||||||||" << endl;
 	imap->LoadMap();
 
 	SYSTEM_MENU.addComponent<SystemController>();
@@ -117,12 +108,12 @@ void Game::update() {
 	SDL_Rect playerCol = player.getComponent<ColliderComponent>().collider;
 	Vector2D playerPos = player.getComponent<TransformComponent>().position;
 
-	//imap->mapRandomize();
-	
-	manager.refresh();
-	manager.update();
+	imap->mapRandomize();
 	//imap->LoadMap();		// pass in the config, external txt, xml, etc. to the LoadMap() if we have map
 
+	manager.refresh();
+	manager.update();
+	
 	for (auto& c : terrains) {
 		SDL_Rect cCol = c->getComponent<ColliderComponent>().collider;
 		if (Collision::boxInterrupt(cCol, playerCol)) {
@@ -166,7 +157,7 @@ void Game::update() {
 
 void Game::render() {
 	SDL_RenderClear(renderer);
-	
+	imap->LoadMap();
 	for (auto& t : tiles) {
 		t->draw();
 	}

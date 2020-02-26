@@ -5,9 +5,6 @@
 
 Game* game = nullptr;
 
-/*
-	First DEMO code
-*/
 void greenWindowForDEMO() {
 	SDL_Init(SDL_INIT_EVERYTHING);
 	SDL_Window* window = SDL_CreateWindow("CREEPER", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 600, 400, SDL_WINDOW_SHOWN);

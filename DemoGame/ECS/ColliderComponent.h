@@ -32,7 +32,7 @@ public:
 		transform = &entity->getComponent<TransformComponent>();
 
 		tex = TextureManager::LoadTexture("images/enemy.png");
-		srcR = { 0,0,32,32 };
+		srcR = { 0,0, 420, 420 };
 		destR = collider;
 
 	}

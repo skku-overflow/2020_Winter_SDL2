@@ -17,10 +17,6 @@ Map::~Map() {
 	
 }
 
-void Map::createMapFile(string path, int sizeX, int sizeY) {
-
-}
-
 void Map::readMapFile(string path, int sizeX, int sizeY) {
 	Map::mapW = sizeX;
 	Map::mapH = sizeY;
@@ -40,14 +36,14 @@ void Map::readMapFile(string path, int sizeX, int sizeY) {
 	for (int y = 0; y < Map::mapH; y++) {
 		for (int x = 0; x < Map::mapW; x++) {
 			mapFile.get(c);
-			Map::mapTileInfo[y][x].srcY = atoi(&c) * tileSize;
+			Map::mapTileInfo[y][x].tsY = atoi(&c);
 			mapFile.get(c);
-			Map::mapTileInfo[y][x].srcX = atoi(&c) * tileSize;
+			Map::mapTileInfo[y][x].tsX = atoi(&c);
 
 			mapFile.ignore();
 		}
 	} mapFile.ignore();
-	
+
 	for (int y = 0; y < Map::mapH; y++) {
 		for (int x = 0; x < Map::mapW; x++) {
 			mapFile.get(c);
@@ -55,43 +51,13 @@ void Map::readMapFile(string path, int sizeX, int sizeY) {
 			mapFile.ignore();
 		}
 	}mapFile.close();
-		
-}
 
-void Map::mapRandomize() {
-	std::random_device rand;
-
-	manager.getGroup(Game::groupMap).clear();
-	manager.getGroup(Game::groupTerrain).clear();
-
-	for (int i = Map::mapH - 1; i > 0; i--) {
-		for (int j = 0; j < Map::mapW; j++) {
-			Map::mapTileInfo[i + 1][j] = Map::mapTileInfo[i][j];
-		}
-	}
-
-	for (int i = 0; i < Map::mapW; i++) {
-		Map::mapTileInfo[0][i] = { static_cast<int>(rand() % 2), static_cast<int>(rand() % 10) };
-		std::cout << mapTileInfo[0] << endl;
-	}
 
 	for (int y = 0; y < Map::mapH; y++) {
 		for (int x = 0; x < Map::mapW; x++) {
-			AddTile(Map::mapTileInfo[y][x].srcX, Map::mapTileInfo[y][x].srcY, x * scaledSize, y * scaledSize);
+			AddTile(Map::mapTileInfo[y][x].tsX, Map::mapTileInfo[y][x].tsY, x, y);
 		}
 	}
-}
-
-void Map::LoadMap() {
-	cout << "-------------Map loading----------------" << endl;
-
-	for (int y = 0; y < Map::mapH; y++) {
-		for (int x = 0; x < Map::mapW; x++) {
-			AddTile(Map::mapTileInfo[y][x].srcX, Map::mapTileInfo[y][x].srcY, x*scaledSize, y*scaledSize);
-		}
-	}
-
-	cout << "-------------Map Loaded----------------" << endl;
 
 	for (int y = 0; y < Map::mapH; y++) {
 		for (int x = 0; x < Map::mapW; x++) {
@@ -102,11 +68,37 @@ void Map::LoadMap() {
 			}
 		}
 	}
+
 }
 
-void Map::AddTile(int srcX, int srcY, int xpos, int ypos) {
+void Map::mapRandomize() {
+	std::random_device rand;
+
+	manager.getGroup(Game::groupMap).clear();
+	//manager.getGroup(Game::groupTerrain).clear();
+
+	for (int i = Map::mapH - 1; i > 0; i--) {
+		for (int j = 0; j < Map::mapW; j++) {
+			Map::mapTileInfo[i][j] = Map::mapTileInfo[i-1][j];
+		}
+	}
+
+	for (int i = 0; i < Map::mapW; i++) {
+		Map::mapTileInfo[0][i] = { static_cast<int>(rand() % 3), static_cast<int>(rand() % 10) };
+	}
+}
+
+void Map::LoadMap() {
+	for (int y = 0; y < Map::mapH; y++) {
+		for (int x = 0; x < Map::mapW; x++) {
+			AddTile(Map::mapTileInfo[y][x].tsX, Map::mapTileInfo[y][x].tsY, x, y);
+		}
+	}
+}
+
+void Map::AddTile(int tsX, int tsY, int epX, int epY) {
 	auto& tile(manager.addEntity());
-	tile.addComponent<TileComponent>(srcX, srcY, xpos, ypos, tileSize, mapScale, mapFilePath);
+	tile.addComponent<TileComponent>(tsX, tsY, epX, epY, tileSize, mapScale, mapFilePath);
 	tile.addGroup(Game::groupMap);
 }
 
