@@ -10,14 +10,14 @@ C:\Users\윤태웅\Programming\Dev\2020_Winter_SDL2\DemoGame\ECS\TileComponent.h
 C:\Users\윤태웅\Programming\Dev\2020_Winter_SDL2\DemoGame\ECS\TileComponent.h(22,16): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
 C:\Users\윤태웅\Programming\Dev\2020_Winter_SDL2\DemoGame\ECS\TileComponent.h(29,27): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
 C:\Users\윤태웅\Programming\Dev\2020_Winter_SDL2\DemoGame\ECS\TileComponent.h(30,27): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\Users\윤태웅\Programming\Dev\2020_Winter_SDL2\DemoGame\Game.cpp(129,66): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\Users\윤태웅\Programming\Dev\2020_Winter_SDL2\DemoGame\Game.cpp(130,66): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\윤태웅\Programming\Dev\2020_Winter_SDL2\DemoGame\Game.cpp(133,66): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\윤태웅\Programming\Dev\2020_Winter_SDL2\DemoGame\Game.cpp(134,66): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
 C:\Users\윤태웅\Programming\Dev\2020_Winter_SDL2\DemoGame\ECS\ECS.h(88,28): warning C4244: 'argument': conversion from '_Ty' to 'float', possible loss of data
           with
           [
               _Ty=double
           ]
-C:\Users\윤태웅\Programming\Dev\2020_Winter_SDL2\DemoGame\Game.cpp(80): message : see reference to function template instantiation 'T &Entity::addComponent<TransformComponent,int,int,int,int,double>(int &&,int &&,int &&,int &&,double &&)' being compiled
+C:\Users\윤태웅\Programming\Dev\2020_Winter_SDL2\DemoGame\Game.cpp(82): message : see reference to function template instantiation 'T &Entity::addComponent<TransformComponent,int,int,int,int,double>(int &&,int &&,int &&,int &&,double &&)' being compiled
           with
           [
               T=TransformComponent

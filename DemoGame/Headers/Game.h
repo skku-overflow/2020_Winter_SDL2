@@ -29,7 +29,7 @@ public:
 		groupMap,
 		groupPlayers,
 		groupEnemies,
-		groupColliders
+		groupTerrain
 	};
 
 	static bool isRunning;

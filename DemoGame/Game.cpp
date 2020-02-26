@@ -73,7 +73,9 @@ void Game::init(const char* title, int width, int height, bool fullscreen) {
 
 	imap = new Map("images/terrain_ss.png",3,32);
 
-	imap->LoadMap("images/map.map",25,20);
+	imap->readMapFile("images/map.map",25,20);
+	cout << "|||||||||||||||||||||||||||" << endl;
+	imap->LoadMap();
 
 	SYSTEM_MENU.addComponent<SystemController>();
 
@@ -93,7 +95,7 @@ void Game::init(const char* title, int width, int height, bool fullscreen) {
 
 auto& tiles(manager.getGroup(Game::groupMap));
 auto& players(manager.getGroup(Game::groupPlayers));
-auto& colliders(manager.getGroup(Game::groupColliders));
+auto& terrains(manager.getGroup(Game::groupTerrain));
 auto& enemies(manager.getGroup(Game::groupEnemies));
 
 void Game::handleEvents() {
@@ -115,11 +117,13 @@ void Game::update() {
 	SDL_Rect playerCol = player.getComponent<ColliderComponent>().collider;
 	Vector2D playerPos = player.getComponent<TransformComponent>().position;
 
-	// map->LoadMap();		// pass in the config, external txt, xml, etc. to the LoadMap() if we have map
+	//imap->mapRandomize();
+	
 	manager.refresh();
 	manager.update();
+	//imap->LoadMap();		// pass in the config, external txt, xml, etc. to the LoadMap() if we have map
 
-	for (auto& c : colliders) {
+	for (auto& c : terrains) {
 		SDL_Rect cCol = c->getComponent<ColliderComponent>().collider;
 		if (Collision::boxInterrupt(cCol, playerCol)) {
 			player.getComponent<TransformComponent>().position = playerPos;
@@ -137,6 +141,8 @@ void Game::update() {
 		camera.x = camera.w*(imap->getMapScale() - 1);
 	if (camera.y > camera.h*(imap->getMapScale() - 1))
 		camera.y = camera.h*(imap->getMapScale() - 1);
+
+	//imap->mapRandomize();
 
 	// Tilemap scrolling
 	/*Vector2D pVel = player.getComponent<TransformComponent>().velocity;
@@ -164,7 +170,7 @@ void Game::render() {
 	for (auto& t : tiles) {
 		t->draw();
 	}
-	for (auto& c : colliders) {
+	for (auto& c : terrains) {
 		c->draw();
 	}
 	for (auto& p : players) {

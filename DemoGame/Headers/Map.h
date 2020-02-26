@@ -5,12 +5,20 @@
 
 using namespace std;
 
+struct mapTile {
+	int srcX, srcY;
+};
+
 class Map {
 public:
 	Map(const char* mfp, int ms, int ts);
 	~Map();	
 
-	void LoadMap(string path, int sizeX, int sizeY);
+	void createMapFile(string path, int sizeX, int sizeY);
+	void readMapFile(string path, int sizeX, int sizeY);
+	void mapRandomize();
+
+	void LoadMap();
 	void AddTile(int srcX, int srcY, int xpos, int ypos);
 	//void DrawMap();
 
@@ -21,6 +29,11 @@ private:
 	int mapScale;
 	int tileSize;
 	int scaledSize;
+
+	int mapW, mapH;
+
+	mapTile** mapTileInfo;
+	int** terrainTileInfo;
 
 	//SDL_Rect src, dest;
 
