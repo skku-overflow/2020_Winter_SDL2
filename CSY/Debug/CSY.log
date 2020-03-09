@@ -1,0 +1,33 @@
+﻿  AssetManager.cpp
+  Collision.cpp
+  ECS.cpp
+  Game.cpp
+  main.cpp
+  Map.cpp
+  TextureManager.cpp
+  Vector2D.cpp
+  코드를 생성하고 있습니다...
+AssetManager.obj : error LNK2019: _SDL_GetTicks 외부 기호(참조 위치: "public: virtual void __thiscall SpriteComponent::update(void)" (?update@SpriteComponent@@UAEXXZ) 함수)에서 확인하지 못했습니다.
+Game.obj : error LNK2001: _SDL_GetTicks 외부 기호를 확인할 수 없습니다.
+main.obj : error LNK2001: _SDL_GetTicks 외부 기호를 확인할 수 없습니다.
+Game.obj : error LNK2019: _SDL_CreateWindow 외부 기호(참조 위치: "public: void __thiscall Game::init(char const *,int,int,bool)" (?init@Game@@QAEXPBDHH_N@Z) 함수)에서 확인하지 못했습니다.
+Game.obj : error LNK2019: _SDL_DestroyWindow 외부 기호(참조 위치: "public: void __thiscall Game::clean(void)" (?clean@Game@@QAEXXZ) 함수)에서 확인하지 못했습니다.
+Game.obj : error LNK2019: _SDL_PollEvent 외부 기호(참조 위치: "public: void __thiscall Game::handleEvents(void)" (?handleEvents@Game@@QAEXXZ) 함수)에서 확인하지 못했습니다.
+Game.obj : error LNK2019: _SDL_CreateRenderer 외부 기호(참조 위치: "public: void __thiscall Game::init(char const *,int,int,bool)" (?init@Game@@QAEXPBDHH_N@Z) 함수)에서 확인하지 못했습니다.
+Game.obj : error LNK2019: _SDL_SetRenderDrawColor 외부 기호(참조 위치: "public: void __thiscall Game::init(char const *,int,int,bool)" (?init@Game@@QAEXPBDHH_N@Z) 함수)에서 확인하지 못했습니다.
+Game.obj : error LNK2019: _SDL_RenderClear 외부 기호(참조 위치: "public: void __thiscall Game::render(void)" (?render@Game@@QAEXXZ) 함수)에서 확인하지 못했습니다.
+Game.obj : error LNK2019: _SDL_RenderPresent 외부 기호(참조 위치: "public: void __thiscall Game::render(void)" (?render@Game@@QAEXXZ) 함수)에서 확인하지 못했습니다.
+Game.obj : error LNK2019: _SDL_DestroyRenderer 외부 기호(참조 위치: "public: void __thiscall Game::clean(void)" (?clean@Game@@QAEXXZ) 함수)에서 확인하지 못했습니다.
+Game.obj : error LNK2019: _SDL_Init 외부 기호(참조 위치: "public: void __thiscall Game::init(char const *,int,int,bool)" (?init@Game@@QAEXPBDHH_N@Z) 함수)에서 확인하지 못했습니다.
+Game.obj : error LNK2019: _SDL_Quit 외부 기호(참조 위치: "public: void __thiscall Game::clean(void)" (?clean@Game@@QAEXXZ) 함수)에서 확인하지 못했습니다.
+main.obj : error LNK2019: _SDL_Delay 외부 기호(참조 위치: _SDL_main 함수)에서 확인하지 못했습니다.
+Map.obj : error LNK2019: _SDL_DestroyTexture 외부 기호(참조 위치: "public: virtual __thiscall TileComponent::~TileComponent(void)" (??1TileComponent@@UAE@XZ) 함수)에서 확인하지 못했습니다.
+TextureManager.obj : error LNK2019: _SDL_FreeSurface 외부 기호(참조 위치: "public: static struct SDL_Texture * __cdecl TextureManager::LoadTexture(char const *)" (?LoadTexture@TextureManager@@SAPAUSDL_Texture@@PBD@Z) 함수)에서 확인하지 못했습니다.
+TextureManager.obj : error LNK2019: _SDL_CreateTextureFromSurface 외부 기호(참조 위치: "public: static struct SDL_Texture * __cdecl TextureManager::LoadTexture(char const *)" (?LoadTexture@TextureManager@@SAPAUSDL_Texture@@PBD@Z) 함수)에서 확인하지 못했습니다.
+TextureManager.obj : error LNK2019: _SDL_RenderCopyEx 외부 기호(참조 위치: "public: static void __cdecl TextureManager::Draw(struct SDL_Texture *,struct SDL_Rect,struct SDL_Rect,enum SDL_RendererFlip)" (?Draw@TextureManager@@SAXPAUSDL_Texture@@USDL_Rect@@1W4SDL_RendererFlip@@@Z) 함수)에서 확인하지 못했습니다.
+TextureManager.obj : error LNK2019: _IMG_Load 외부 기호(참조 위치: "public: static struct SDL_Texture * __cdecl TextureManager::LoadTexture(char const *)" (?LoadTexture@TextureManager@@SAPAUSDL_Texture@@PBD@Z) 함수)에서 확인하지 못했습니다.
+MSVCRTD.lib(exe_main.obj) : error LNK2019: _main 외부 기호(참조 위치: "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ) 함수)에서 확인하지 못했습니다.
+C:\Users\Beni\Desktop\CSY\CSY\SDL2\lib\x64\SDL2.lib : warning LNK4272: 'x64' 라이브러리 컴퓨터 종류가 'x86' 대상 컴퓨터 종류와 충돌합니다.
+C:\Users\Beni\Desktop\CSY\CSY\SDL2\lib\x64\SDL2main.lib : warning LNK4272: 'x64' 라이브러리 컴퓨터 종류가 'x86' 대상 컴퓨터 종류와 충돌합니다.
+C:\Users\Beni\Desktop\CSY\CSY\SDL2_image-2.0.1\lib\x64\SDL2_image.lib : warning LNK4272: 'x64' 라이브러리 컴퓨터 종류가 'x86' 대상 컴퓨터 종류와 충돌합니다.
+C:\Users\Beni\Desktop\CSY\CSY\Debug\CSY.exe : fatal error LNK1120: 18개의 확인할 수 없는 외부 참조입니다.
